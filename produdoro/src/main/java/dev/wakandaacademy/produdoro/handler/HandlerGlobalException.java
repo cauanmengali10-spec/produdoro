@@ -14,7 +14,6 @@ public class HandlerGlobalException {
         return apiException.errorApiResponseResponseEntity();
     }
 
-
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorApiResponse>handlerGenericException(Exception exception){
         return ResponseEntity
