@@ -1,5 +1,6 @@
 package dev.wakandaacademy.produdoro.usuario.application.api;
 
+import dev.wakandaacademy.produdoro.usuario.domain.ConfiguracaoUsuario;
 import lombok.Value;
 
 @Value
@@ -9,4 +10,14 @@ public class ConfiguracaoUsuarioResponse {
     private final Integer tempoMinutosPausaCurta;
     private final Integer tempoMinutosPausaLonga;
     private final Integer repeticoesParaPausaLonga;
+
+
+    public ConfiguracaoUsuarioResponse(ConfiguracaoUsuario configuracao) {
+        this.tempoMinutosPausaLonga = configuracao.getTempoMinutosPausaLonga();
+        this.tempoMinutosPausaCurta = configuracao.getTempoMinutosPausaCurta();
+        this.tempoMinutosFoco = configuracao.getTempoMinutosFoco();
+        this.repeticoesParaPausaLonga = configuracao.getRepeticoesParaPausaLonga();
+    }
+
+
 }

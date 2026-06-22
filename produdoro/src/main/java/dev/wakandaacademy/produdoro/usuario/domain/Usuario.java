@@ -1,6 +1,7 @@
 package dev.wakandaacademy.produdoro.usuario.domain;
 
 
+import dev.wakandaacademy.produdoro.usuario.application.api.UsuarioNovoRequest;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.aggregation.ArrayOperators;
@@ -23,12 +24,23 @@ public class Usuario {
     @Email
     @Indexed
     private String email;
-    private ConfiguracaoUsuario configuracaoUsuario;
+    private ConfiguracaoUsuario configuracao;
     @Builder.Default
     private StatusUsuario status = StatusUsuario.FOCO;
     @Builder.Default
     private Integer quantidadePomodorosPausaCurta = 0;
 
+
+    public Usuario(UsuarioNovoRequest usuarioNovo){
+        this.email = usuarioNovo.getEmail();
+        this.status = StatusUsuario.FOCO;
+        this.configuracao = ConfiguracaoUsuario.builder()
+                .tempoMinutosFoco(25)
+                .tempoMinutosPausaCurta(5)
+                .tempoMinutosPausaLonga(15)
+                .repeticoesParaPausaLonga(3)
+                .build();
+    }
 
 
 
