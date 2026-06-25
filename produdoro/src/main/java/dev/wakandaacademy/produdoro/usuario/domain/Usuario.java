@@ -1,6 +1,7 @@
 package dev.wakandaacademy.produdoro.usuario.domain;
 
 
+import dev.wakandaacademy.produdoro.pomodoro.domain.ConfiguracaoPadrao;
 import dev.wakandaacademy.produdoro.usuario.application.api.UsuarioNovoRequest;
 import lombok.*;
 import org.springframework.data.annotation.Id;
@@ -31,15 +32,10 @@ public class Usuario {
     private Integer quantidadePomodorosPausaCurta = 0;
 
 
-    public Usuario(UsuarioNovoRequest usuarioNovo){
+    public Usuario(UsuarioNovoRequest usuarioNovo, ConfiguracaoPadrao configuracaoPadrao){
         this.email = usuarioNovo.getEmail();
         this.status = StatusUsuario.FOCO;
-        this.configuracao = ConfiguracaoUsuario.builder()
-                .tempoMinutosFoco(25)
-                .tempoMinutosPausaCurta(5)
-                .tempoMinutosPausaLonga(15)
-                .repeticoesParaPausaLonga(3)
-                .build();
+        this.configuracao = new ConfiguracaoUsuario(configuracaoPadrao);
     }
 
 
