@@ -32,10 +32,12 @@ public class Usuario {
     private Integer quantidadePomodorosPausaCurta = 0;
 
 
+
     public Usuario(UsuarioNovoRequest usuarioNovo, ConfiguracaoPadrao configuracaoPadrao){
         this.email = usuarioNovo.getEmail();
         this.status = StatusUsuario.FOCO;
         this.configuracao = new ConfiguracaoUsuario(configuracaoPadrao);
+
     }
 
 

@@ -16,10 +16,10 @@ public class ConfiguracaoUsuario {
 
 
     public ConfiguracaoUsuario(ConfiguracaoPadrao configuracaoPadrao){
-        this.tempoMinutosFoco = getTempoMinutosFoco();
-        this.tempoMinutosPausaCurta = getTempoMinutosPausaCurta();
-        this.tempoMinutosPausaLonga = getTempoMinutosPausaLonga();
-        this.repeticoesParaPausaLonga = getRepeticoesParaPausaLonga();
+        this.tempoMinutosFoco = configuracaoPadrao.getTempoMinutosFoco();
+        this.tempoMinutosPausaCurta = configuracaoPadrao.getTempoMinutosPausaCurta();
+        this.tempoMinutosPausaLonga = configuracaoPadrao.getTempoMinutosPausaLonga();
+        this.repeticoesParaPausaLonga = configuracaoPadrao.getRepeticoesParaPausaLonga();
     }
 
 }
