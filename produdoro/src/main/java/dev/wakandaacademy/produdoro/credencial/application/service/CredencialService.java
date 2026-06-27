@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 public class CredencialService implements CredencialApplicationService{
     @Override
     public void criaNovaCredencial(UsuarioNovoRequest usuarioNovo) {
+        //TODO implementar metodo para criar nova credencial
 
 
 

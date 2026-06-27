@@ -8,5 +8,5 @@ import java.util.UUID;
 
 
 public interface UsuarioRepository  {
-    void salva(Usuario usuario);
+    Usuario salva(Usuario usuario);
 }
