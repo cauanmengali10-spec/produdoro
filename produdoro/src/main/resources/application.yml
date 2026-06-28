@@ -6,7 +6,7 @@ spring:
   data:
     mongodb:
       authentication-database: admin
-      uri: ${MONGO_DB_URI:mongodb+srv://cauan:grovyle10@cluster0.zmqxdb2.mongodb.net/Cluster0?appName=Cluster0}
+      uri: ${MONGO_DB_URI:mongodb+srv://cauan:grovyle10@cluster0.zmqxdb2.mongodb.net/produdoroDevDB?appName=Cluster0}
       auto-index-creation: true
 
 

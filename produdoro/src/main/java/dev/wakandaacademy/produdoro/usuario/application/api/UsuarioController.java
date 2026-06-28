@@ -15,7 +15,6 @@ public class UsuarioController implements UsuarioAPI {
     private final UsuarioApplicationService usuarioApplicationService;
 
 
-
     @Override
     public UsuarioCriadoResponse postNovoUsuario(@Valid UsuarioNovoRequest usuarioNovo){
         log.info("[start] UsuarioController - postNovoUsuario");
