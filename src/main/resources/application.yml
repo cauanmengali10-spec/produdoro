@@ -1,0 +1,11 @@
+server:
+  servlet:
+    context-path: /produdoro/api
+
+spring:
+  mongodb:
+    uri: ${MONGO_DB_URI:mongodb+srv://cauanmengali10_db_user:wakanda@wakanda.jpwi16d.mongodb.net/wakanda?appName=wakanda}
+
+springdoc:
+  swagger-ui:
+    path: /swagger
